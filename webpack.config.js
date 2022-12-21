@@ -7,12 +7,18 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "app.js",
+    clean: true,
+    assetModuleFilename: "assets/[name][ext]",
   },
   module: {
     rules: [
       {
         test: /\.css/,
         use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.(png|jpg|svg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
