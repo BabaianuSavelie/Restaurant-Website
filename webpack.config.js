@@ -7,7 +7,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "app.js",
-    clean: true,
     assetModuleFilename: "assets/[name][ext]",
   },
   module: {
@@ -17,18 +16,23 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
+        test: /\.(scss)$/,
+        use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
+      },
+      {
         test: /\.(png|jpg|svg|jpeg|gif)$/i,
         type: "asset/resource",
       },
     ],
   },
   devServer: {
-    watchFiles: ["./src/"],
+    watchFiles: ["./src/", "./public/index.html"],
     port: 3000,
     hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: "Metropolis",
       template: "src/template.html",
     }),
   ],

@@ -1,4 +1,5 @@
-import "./css/index.css";
-// import { imageAssign } from "./imageAsignment";
+// Import our custom CSS
+import "./scss/index.scss";
 
-// imageAssign();
+// Import all of Bootstrap JS
+import * as bootstrap from "bootstrap";
