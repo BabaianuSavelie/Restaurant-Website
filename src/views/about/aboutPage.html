@@ -8,6 +8,8 @@
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
         <script src="https://kit.fontawesome.com/a9719e28a4.js" crossorigin="anonymous"></script>
         <title>
             <%= htmlWebpackPlugin.options.title%>
@@ -15,7 +17,7 @@
     </head>
 
     <body style="background-color: #111111; color: white;">
-        <div class="container my-5 py-4 px-3 first-section">
+        <div class="container my-5 py-4 px-3 first-section"  data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
             <div id="gallery">
                 <div class="d-flex m-3">
                     <div class="m-2" id="first-photo"> <img width="280px" height="280px" alt="gallery-item" src="https://images.unsplash.com/photo-1521305916504-4a1121188589?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"> </div>
@@ -71,7 +73,7 @@
         <div class="bg-image my-3 mx-0"
             style="background-image: url('https://wallpaperaccess.com/full/767033.jpg'); height: 100vh;">
             <div class="mask" style="background-color: rgba(0, 0, 0, 0.9);  height: 100vh;">
-                <div class="container text-section py-4 px-3">
+                <div class="container text-section py-4 px-3" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                     <h1 class="text-center pt-2"><span>Me</span>et our team</h1>
                     <div class="first-section">
                         <div class="d-flex m-4 my-2">
@@ -127,7 +129,7 @@
             </div>
         </div>
     
-        <div class=" mt-4 container text-section py-4 px-3">
+        <div class=" mt-4 container text-section py-4 px-3" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
             <h1 class="text-center my-3"><span>Ga</span>lerie</h1>
             <div class="row">
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
@@ -148,7 +150,7 @@
          <!--Footer-->
          <footer class="bg-dark text-center text-white">
             <section>
-                <div class="container text-center text-md-start my-5">
+                <div class="container text-center text-md-start my-5" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                     <div class="row">
                         <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
                             <h6 class="mb-3 m-5 text-center" id="title">Contact us</h6>
@@ -193,7 +195,9 @@
             </div>
             <div class="text-center p-3" style="background-color: #fd9d0b;"></div>
         </footer>
-    
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init(); //uncoment this for fade animation
+          </script>
     </body>
     </html>
