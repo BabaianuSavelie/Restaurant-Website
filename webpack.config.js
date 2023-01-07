@@ -6,7 +6,8 @@ module.exports = {
   mode: "development",
   entry: {
     about: "./src/views/about/about.js",
-    menu: "./src/views/menu/menu.js"
+    menu: "./src/views/menu/menu.js",
+    contacts: "./src/views/contacts/contacts.js",
   },
   output: {
     path: path.resolve(__dirname, "public"),
@@ -48,6 +49,13 @@ module.exports = {
       template: "src/views/menu/menuPage.html",
       filename: "menuPage.html",
       chunks: "menu",
+    }),
+    new HtmlWebpackPlugin({
+      inject:true,
+      title: "Metropolis | Contacts",
+      template: "src/views/contacts/contactsPage.html",
+      filename: "contactsPage.html",
+      chunks: "contacts",
     }),
   ],
 };
