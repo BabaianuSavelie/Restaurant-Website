@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   entry: {
     about: "./src/views/about/about.js",
-    menu: "./src/views/about/about.js"
+    menu: "./src/views/menu/menu.js"
   },
   output: {
     path: path.resolve(__dirname, "public"),
