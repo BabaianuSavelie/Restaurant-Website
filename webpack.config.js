@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "app.js",
-    assetModuleFilename: "assets/[name][ext]",
+    // assetModuleFilename: "assets/[name][ext]",
   },
   module: {
     rules: [
@@ -22,6 +22,9 @@ module.exports = {
       {
         test: /\.(png|jpg|svg|jpeg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "assets/[name][ext]",
+        },
       },
     ],
   },

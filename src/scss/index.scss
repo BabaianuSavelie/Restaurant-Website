@@ -1,2 +1,87 @@
-
 @import "~bootstrap/scss/bootstrap";
+
+$primary-font: "Oleo Script";
+$secondary-font: "Open Sans";
+$primary-color: #fd9d0b;
+
+body {
+  font-family: $secondary-font, sans-serif;
+  color: #fff;
+}
+.wrapper {
+  background-image: url("../assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  /*z-index: -1;*/
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.93);
+    z-index: 2;
+  }
+
+  .bar {
+    height: 20vh;
+    width: 3px;
+    background-color: azure;
+    border-radius: 10px;
+  }
+  .social-icon {
+    font-size: 1rem;
+    color: #fff;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .shopping-cart {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .items-count {
+    position: absolute;
+    right: -10px;
+    top: 0;
+    background-color: red;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 3px;
+  }
+
+  .hero-description {
+    font-family: $primary-font;
+    font-size: 4rem;
+  }
+
+  .menu-cta {
+    background-color: $primary-color;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+  }
+}
+.blur-background {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95) 0,
+    rgba(0, 0, 0, 0.59) 100%
+  );
+}
+.p-color {
+  color: $primary-color;
+}
+.bg-primary {
+  background-color: $primary-color;
+}
