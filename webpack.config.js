@@ -1,12 +1,16 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const webpack = require('webpack');
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: {
+    about: "./src/views/about/about.js",
+    menu: "./src/views/about/about.js"
+  },
   output: {
     path: path.resolve(__dirname, "public"),
-    filename: "app.js",
+    filename: "[name].js",
     assetModuleFilename: "assets/[name][ext]",
   },
   module: {
@@ -32,8 +36,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Metropolis",
-      template: "src/template.html",
+      inject:true,
+      title: "Metropolis | About Us",
+      template: "src/views/about/aboutPage.html",
+      filename: "aboutPage.html",
+      chunks: "about",
+    }),
+    new HtmlWebpackPlugin({
+      inject:true,
+      title: "Metropolis | Menu",
+      template: "src/views/menu/menuPage.html",
+      filename: "menuPage.html",
+      chunks: "menu",
     }),
   ],
 };
