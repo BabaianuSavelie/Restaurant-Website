@@ -8,6 +8,8 @@ module.exports = {
     about: "./src/views/about/about.js",
     menu: "./src/views/menu/menu.js",
     contacts: "./src/views/contacts/contacts.js",
+    contacts: "./src/views/main/main.js",
+    contacts: "./src/views/cart/cart.js",
   },
   output: {
     path: path.resolve(__dirname, "public"),
@@ -64,6 +66,20 @@ module.exports = {
       template: "src/views/contacts/contactsPage.html",
       filename: "contactsPage.html",
       chunks: "contacts",
+    }),
+    new HtmlWebpackPlugin({
+      inject:true,
+      title: "Metropolis | Main",
+      template: "src/views/main/mainPage.html",
+      filename: "mainPage.html",
+      chunks: "main",
+    }),
+    new HtmlWebpackPlugin({
+      inject:true,
+      title: "Metropolis | Cart",
+      template: "src/views/cart/cartPage.html",
+      filename: "cartPage.html",
+      chunks: "cart",
     }),
   ],
 };
