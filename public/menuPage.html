@@ -10,15 +10,19 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-    
+    <!--uncoment this for fade animation-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--
+        need to import:
+            ./node_modules/owl.carousel/dist/assets/owl.carousel.min.css
+            ./node_modules/owl.carousel/dist/assets/owl.theme.default.min.css
+    -->
 
     <title>
         Metropolis | Menu
     </title>
-<script defer src="about.js"></script><script defer src="menu.js"></script></head>
+<script defer src="about.js"></script><script defer src="menu.js"></script><script defer src="contacts.js"></script></head>
 <body style="background-color: #111111; color: white;">
     <div class="container d-flex my-5">
         <!--Navbar menu section-->
@@ -698,7 +702,7 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init(); //uncoment this for fade animation
     </script>
 </body>
 </html>
