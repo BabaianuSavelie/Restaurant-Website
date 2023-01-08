@@ -152,6 +152,19 @@ body {
 		background-color: #212529 !important;
 	}
 }
+.map-container {
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
+	iframe {
+		left: 0;
+		top: 0;
+		height: 70%;
+		width: 100%;
+		position: absolute;
+	}
+}
 @media screen and (max-width:900px) {
 	.nav-menu {
 		display: none;
